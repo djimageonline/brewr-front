@@ -1,0 +1,58 @@
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  column-gap: 0px;
+  row-gap: 24px;
+  max-width: 948px;
+  margin: 0 auto;
+  
+}
+
+.card {
+  height: 200px;
+  width: 300px;
+  border: 3px solid;
+  border-radius: 10px;
+  text-align: center;
+  border-color: rgb(159, 167, 18);
+  font-size: 12px;
+  line-height: 15px;
+  box-shadow: 0 5px 10px rgba(31, 23, 23, 0.05), 0 15px 40px rgba(226, 245, 169, 0.2);
+}
+
+.search {
+  padding-bottom: 20px;
+}
+
+.location {
+  padding-bottom: 20px;
+}
+.location label {
+  padding-right: 5px;
+}
+.location input {
+  margin-left: 5px;
+  padding-bottom: 2px;
+}
+
+.location .submit {
+  margin-top: 10px;
+}
+
+p a {
+  margin-left: 115px;
+  margin-right: 115px;
+}
+
+
+
+/* p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+} */
+
+
