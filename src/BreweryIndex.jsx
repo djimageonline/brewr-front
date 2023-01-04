@@ -4,18 +4,24 @@ import { useState } from "react";
 export function BreweryIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
 
+  const handeSubmit = (event) => {
+    event.preventDefault();
+    const params = new FormData(event.target);
+    props.onUpdateIndexBrewery(params);
+  };
+
   return (
     <div id="brewery-index">
       <h1>All Breweries</h1>
 
       <div className="search">
         <div className="location">
-          <form method="POST" action="/foo-route">
-            <label for="cname">City: </label>
-            <input type="text" id="cname" name="cname" />
+          <form onSubmit={handeSubmit}>
+            <label for="city">City: </label>
+            <input type="text" id="city" name="city" />
             <br></br>
-            <label for="sname">State:</label>
-            <input type="text" id="sname" name="sname" />
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" />
             <br></br>
             <input type="submit" value="Submit" className="submit"></input>
           </form>

@@ -12,7 +12,7 @@ export function Header() {
             <img src="/images/home-house-building-svgrepo-com.svg" alt="HOME" />
             <span> HOME</span>
           </a>
-          <a href="/">
+          <a href="/Search">
             <img src="/images/beer-svgrepo-com.svg" alt="SEARCH" />
             <span>SEARCH BREWERY</span>
           </a>
