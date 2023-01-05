@@ -1,6 +1,7 @@
 import "./index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Dropdown } from "./Dropdown";
 
 export function BreweryIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
@@ -68,15 +69,14 @@ export function BreweryIndex(props) {
                   <a href={`https://www.${brewery.url}`}>Website</a>
                 </p>
                 <br></br>
-                <button onClick={() => handleIndexBrewery(brewery)}>More Info</button>
+                {/* <button onClick={() => handleIndexBrewery(brewery)}>More Info</button> */}
+                <div className="App">
+                  <Dropdown />
+                </div>
+                <button>Add Brewery</button>
               </div>
             </div>
           ))}
-        {/* <BreweryIndex
-        breweries={breweries}
-        onSelectBrewery={handleIndexBrewery}
-        onUpdateIndexBrewery={handleUpdateIndexBrewery}
-      /> */}
       </div>
     </div>
   );
