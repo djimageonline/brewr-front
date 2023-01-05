@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { TourIndex } from "./TourIndex";
+import { BreweryIndex } from "./BreweryIndex";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/brewery/index" element={<BreweryIndex />} />
           <Route path="/tours/index" element={<TourIndex />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />

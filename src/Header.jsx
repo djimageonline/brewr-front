@@ -15,7 +15,7 @@ export function Header() {
             <span> HOME</span>
           </Link>
 
-          <Link to="/Search">
+          <Link to="/brewery/index">
             <img src="/images/beer-svgrepo-com.svg" alt="SEARCH" />
             <span>SEARCH BREWERY</span>
           </Link>
@@ -26,8 +26,14 @@ export function Header() {
           </Link>
           {localStorage.jwt === undefined ? (
             <>
-              <Link to="/signup">Signup</Link>
-              <Link to="/login">Login</Link>
+              <Link to="/signup">
+                <img src="/images/user-svgrepo-com.svg" alt="HOME" />
+                <span>SIGNUP</span>
+              </Link>
+              <Link to="/login">
+                <img src="/images/login-svgrepo-com.svg" alt="HOME" />
+                <span>LOGIN</span>
+              </Link>
             </>
           ) : (
             <LogoutLink />

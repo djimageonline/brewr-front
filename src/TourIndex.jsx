@@ -53,13 +53,20 @@ export function TourIndex(props) {
     });
   };
 
+  const handleDestoryTour = (tour) => {
+    axios.delete("http://localhost:3000/tours/" + tour.id + ".json").then((response) => {
+      setTours(tours.filter((t) => t.id !== tour.id));
+      handleClose();
+    });
+  };
+
   useEffect(handleShowTours, []);
 
   return (
     <div>
       <ToursNew onCreateTour={handleCreateTour} />
       <Modal show={isTourShowInfoVisible} onClose={handleClose}>
-        <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} />
+        <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} onDestroyTour={handleDestoryTour} />
       </Modal>
       <h1>Your Tours:</h1>
       {tours.map((tour) => (

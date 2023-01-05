@@ -1,14 +1,33 @@
-import "./BreweryIndex.css";
-import { useState } from "react";
+import "./index.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export function BreweryIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
 
+  const handleUpdateIndexBrewery = (params) => {
+    axios.post(`http://localhost:3000/breweries`, params).then((response) => {
+      console.log(response.data);
+      setBreweries(response.data);
+    });
+  };
+
   const handeSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.onUpdateIndexBrewery(params);
+    handleUpdateIndexBrewery(params);
   };
+
+  const [breweries, setBreweries] = useState([]);
+
+  const handleIndexBrewery = () => {
+    axios.get("http://localhost:3000/breweries").then((response) => {
+      console.log(response.data);
+      setBreweries(response.data);
+    });
+  };
+
+  useEffect(handleIndexBrewery, []);
 
   return (
     <div id="brewery-index">
@@ -35,7 +54,7 @@ export function BreweryIndex(props) {
         />
       </div>
       <div className="container">
-        {props.breweries
+        {breweries
           .filter((brewery) => brewery.name.toLowerCase().includes(searchFilter.toLowerCase()))
           .map((brewery) => (
             <div className="card">
@@ -44,14 +63,20 @@ export function BreweryIndex(props) {
                 <p>
                   Address: {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
                 </p>
+                <p>{brewery.phone}</p>
                 <p>
                   <a href={`https://www.${brewery.url}`}>Website</a>
                 </p>
                 <br></br>
-                <button onClick={() => props.onSelectBrewery(brewery)}>More Info</button>
+                <button onClick={() => handleIndexBrewery(brewery)}>More Info</button>
               </div>
             </div>
           ))}
+        {/* <BreweryIndex
+        breweries={breweries}
+        onSelectBrewery={handleIndexBrewery}
+        onUpdateIndexBrewery={handleUpdateIndexBrewery}
+      /> */}
       </div>
     </div>
   );

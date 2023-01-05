@@ -1,10 +1,14 @@
-import "./TourShow.css";
+import "./index.css";
 
 export function TourShow(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onUpdateTour(props.tour.id, params, () => event.target.reset());
+  };
+
+  const handleClick = () => {
+    props.onDestroyTour(props.tour);
   };
 
   return (
@@ -16,6 +20,7 @@ export function TourShow(props) {
             <button type="submit">Update Name</button>
           </div>
         </form>
+        <button onClick={handleClick}>Delete Tour</button>
       </div>
       <div className="container2">
         {props.tour.breweries.map((brewery) => (
