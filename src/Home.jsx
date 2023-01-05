@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { LogoutLink } from "./LogoutLink";
 import { BreweryIndex } from "./BreweryIndex";
 
 export function Home() {
@@ -24,8 +23,8 @@ export function Home() {
 
   return (
     <div>
-      <h1>Welcome to React!</h1>
-      <LogoutLink />
+      <br></br>
+      <br></br>
       <BreweryIndex
         breweries={breweries}
         onSelectBrewery={handleIndexBrewery}

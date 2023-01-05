@@ -11,7 +11,7 @@
 
 .card2 {
   height: 120px;
-  width: 300px;
+  width: 280px;
   border: 3px solid;
   border-radius: 10px;
   text-align: center;
@@ -24,10 +24,15 @@
 
 .center-title {
   text-align: center;
-  background-color: aliceblue;
-  border: 1px solid;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-top: 20px;
+  /* margin-left: 30%;
+  margin-right: 30%; */
+  margin-bottom: 20px;
+
+}
+
+.center-title button {
+  margin-top: 5px;
 }
 
 .background_modal{
@@ -39,4 +44,8 @@
 .card2 a {
   margin-left: 30%;
   margin-right: 30%;
+}
+
+.titlebrew{
+  font-size:30px;
 }

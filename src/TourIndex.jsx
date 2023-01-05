@@ -36,13 +36,30 @@ export function TourIndex(props) {
     setCurrentTour(tour);
   };
 
+  const handleUpdateTour = (id, params, successCallback) => {
+    console.log("handleUpdateTour", params);
+    axios.patch(`http://localhost:3000/tours/${id}.json`, params).then((response) => {
+      setTours(
+        tours.map((tour) => {
+          if (tour.id === response.data.id) {
+            return response.data;
+          } else {
+            return tour;
+          }
+        })
+      );
+      successCallback();
+      handleClose();
+    });
+  };
+
   useEffect(handleShowTours, []);
 
   return (
     <div>
       <ToursNew onCreateTour={handleCreateTour} />
       <Modal show={isTourShowInfoVisible} onClose={handleClose}>
-        <TourShow tour={currentTour} />
+        <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} />
       </Modal>
       <h1>Your Tours:</h1>
       {tours.map((tour) => (

@@ -1,5 +1,5 @@
 export function ToursNew(props) {
-  const handeSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
     props.onCreateTour(params, () => event.target.reset());
@@ -8,7 +8,7 @@ export function ToursNew(props) {
   return (
     <div>
       <h1>New Tour</h1>
-      <form onSubmit={handeSubmit}>
+      <form onSubmit={handleSubmit}>
         <div>
           Name: <input name="name" type="text" />
         </div>
