@@ -78,7 +78,6 @@ export function BreweryIndex(props) {
                   <a href={`https://www.${brewery.url}`}>Website</a>
                 </p>
                 <br></br>
-                {/* <button onClick={() => handleIndexBrewery(brewery)}>More Info</button> */}
                 <div className="App">
                   <Dropdown dropdownTours={tours} />
                 </div>
