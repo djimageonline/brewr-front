@@ -4,6 +4,22 @@ html {
 
 footer {
   text-align: center;
+  background-color: #090b13;
+  padding: 1px;
+  margin-top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  color: white;
+}
+
+/**** HOME */
+
+.back-containter {
+  margin-top: 70px;
+  /* display: block;
+  overflow-x: hidden; */
 }
 
 
@@ -59,6 +75,8 @@ footer {
   font-size:30px;
 }
 
+
+
 /******   BREWRIES INDEX SHOW STYLE   ******/
 
 
@@ -70,7 +88,8 @@ footer {
   row-gap: 24px;
   max-width: 948px;
   margin: 0 auto;
-  
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .card {
@@ -83,15 +102,9 @@ footer {
   font-size: 12px;
   line-height: 15px;
   box-shadow: 0 5px 10px rgba(31, 23, 23, 0.05), 0 15px 40px rgba(226, 245, 169, 0.2);
+  background-color: antiquewhite;
 }
 
-.search {
-  padding-bottom: 20px;
-}
-
-.location {
-  padding-bottom: 20px;
-}
 .location label {
   padding-right: 5px;
 }
@@ -109,8 +122,31 @@ footer {
   margin-right: 115px;
 }
 
+/*** Brwery Search  ***/
+.all-brew-containter {
+  background-color: #090b13;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+.item1 {
+  padding-right: 30px;
+}
+
 /* #root {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/purty_wood.png");
   overflow: scroll;
-  height: 100vh;
+
 } */
+
+body {
+  position: relative;
+  background-image: url("/images/beerbackground1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}

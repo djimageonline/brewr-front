@@ -2,10 +2,12 @@ import "./index.css";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { Dropdown } from "./Dropdown";
+import { ImageSlider } from "./ImageSlider";
 
 export function BreweryIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
   const [tours, setTours] = useState([]);
+  const [breweriesTours, setBreweriesTours] = useState([]);
 
   const handleUpdateIndexBrewery = (params) => {
     axios.post(`http://localhost:3000/breweries`, params).then((response) => {
@@ -36,15 +38,27 @@ export function BreweryIndex(props) {
     });
   };
 
+  const handleAddBreweryToTour = (params) => {
+    axios.post(`http://localhost:3000/breweries_tours.json`, params).then((response) => {
+      console.log(response.data);
+      // setBreweriesTours(response.data);
+    });
+  };
+
   useEffect(handleIndexBrewery, []);
   useEffect(handleShowTours, []);
+  useEffect(handleAddBreweryToTour, []);
 
   return (
     <div id="brewery-index">
-      <h1>All Breweries</h1>
-
-      <div className="search">
-        <div className="location">
+      <div className="back-containter">
+        <ImageSlider />
+      </div>
+      <div className="all-brew-containter">
+        <div className="item1">
+          <h1>Search for Breweries</h1>
+        </div>
+        <div className="item1">
           <form onSubmit={handeSubmit}>
             <label for="city">City: </label>
             <input type="text" id="city" name="city" />
@@ -55,13 +69,15 @@ export function BreweryIndex(props) {
             <input type="submit" value="Submit" className="submit"></input>
           </form>
         </div>
-        Search filter:
-        <input
-          className=""
-          type="text"
-          value={searchFilter}
-          onChange={(event) => setSearchFilter(event.target.value)}
-        />
+        <div className="item1">
+          Search filter:
+          <input
+            className=""
+            type="text"
+            value={searchFilter}
+            onChange={(event) => setSearchFilter(event.target.value)}
+          />
+        </div>
       </div>
       <div className="container">
         {breweries
@@ -73,13 +89,13 @@ export function BreweryIndex(props) {
                 <p>
                   Address: {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
                 </p>
-                <p>{brewery.phone}</p>
+                {/* <p>{brewery.phone}</p> */}
                 <p>
                   <a href={`https://www.${brewery.url}`}>Website</a>
                 </p>
                 <br></br>
                 <div className="App">
-                  <Dropdown dropdownTours={tours} />
+                  <Dropdown dropdownTours={tours} addBreweryTours={handleAddBreweryToTour} brewery={brewery} />
                 </div>
               </div>
             </div>
