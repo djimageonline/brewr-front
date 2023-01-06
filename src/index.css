@@ -1,17 +1,18 @@
+* {box-sizing: border-box;}
+
 html {
   scroll-behavior: smooth;
+  /* height: 100%; */
+  
 }
 
-footer {
-  text-align: center;
-  background-color: #090b13;
-  padding: 1px;
-  margin-top: 0px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  color: white;
+body {
+  position: relative;
+  background-image: url("/images/beerbackground1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+
 }
 
 /**** HOME */
@@ -21,6 +22,82 @@ footer {
   /* display: block;
   overflow-x: hidden; */
 }
+
+/*****   LOGIN FORM   ***********/
+
+@keyframes background {
+  100% {background-size: 4000px 1000px;}
+  
+}
+  
+.body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  margin: 100px 10px;
+  margin-top: 100px;
+  padding: 30px 24px;
+  background-color: #161616;
+  background-position: -500px 0;
+  border-radius: 22px;
+  border: 3px solid;
+  border-color: rgb(255, 255, 118);
+  
+}
+
+@media (width >= 300px) {
+  .body {
+    margin: 100px 50px;
+    /* place-items: center;
+    margin: 0 auto;
+    padding-right: 60px; */
+    }
+}
+
+
+.login {
+  width: 90%;
+  padding: 5px 30px 10px;
+  text-align: center;
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.signup {
+  width: 90%;
+  padding: 5px 30px 10px;
+  text-align: center;
+}
+
+.signup-form {
+  display: grid;
+  gap: 16px;
+  place-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+
+.textbox {
+  width: 100%;
+  position: relative;
+}
+
+.textbox span {
+  position: relative;
+  top: 50%;
+  left: 16px;
+  translate: 0 -50%;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+
 
 
 /*****   TOUR SHOW STYLE    ***********/
@@ -123,6 +200,7 @@ footer {
 }
 
 /*** Brwery Search  ***/
+
 .all-brew-containter {
   background-color: #090b13;
   color: white;
@@ -138,15 +216,24 @@ footer {
   padding-right: 30px;
 }
 
-/* #root {
-  overflow: scroll;
 
+/*** Brwery Search  ***/
+
+footer {
+  text-align: center;
+  background-color: #090b13;
+  padding: 1px;
+  margin-top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  color: white;
+}
+
+
+
+/* #root {
+  
 } */
 
-body {
-  position: relative;
-  background-image: url("/images/beerbackground1.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-}
