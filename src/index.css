@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* height: 100%; */
+  height: 100%;
   
 }
 
@@ -17,10 +17,36 @@ body {
 
 /**** HOME */
 
+.e-home {
+padding-bottom: 34px;
+
+}
+
 .back-containter {
   margin-top: 70px;
   /* display: block;
   overflow-x: hidden; */
+}
+
+.banner {
+  background-image: url("/images/Beerlight-homebanner.jpg");
+  background-color: #cccccc;
+  height: 800px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.box {
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  font-size: 50px;
 }
 
 /*****   LOGIN FORM   ***********/
@@ -48,10 +74,8 @@ body {
 @media (width >= 300px) {
   .body {
     margin: 100px 50px;
-    /* place-items: center;
-    margin: 0 auto;
-    padding-right: 60px; */
     }
+
 }
 
 
@@ -59,6 +83,7 @@ body {
   width: 90%;
   padding: 5px 30px 10px;
   text-align: center;
+  color: white;
 }
 
 .login-form {
@@ -73,6 +98,7 @@ body {
   width: 90%;
   padding: 5px 30px 10px;
   text-align: center;
+  color: white;
 }
 
 .signup-form {
@@ -156,6 +182,13 @@ body {
 
 /******   BREWRIES INDEX SHOW STYLE   ******/
 
+.empty-brew-div {
+  padding: 5px;
+}
+
+.all-brew-containter {
+  margin-top: -1px;
+}
 
 .container {
   display: grid;
@@ -166,21 +199,25 @@ body {
   max-width: 948px;
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .card {
   height: 200px;
   width: 300px;
   border: 3px solid;
+  color: #090b13;
   border-radius: 10px;
   text-align: center;
-  border-color: rgb(159, 167, 18);
+  border-color: #090b13;
   font-size: 12px;
   line-height: 15px;
   box-shadow: 0 5px 10px rgba(31, 23, 23, 0.05), 0 15px 40px rgba(226, 245, 169, 0.2);
-  background-color: antiquewhite;
+  background-color: whitesmoke;
 }
+/* #brewery-index {
+  margin-bottom: 100px;
+} */
 
 .location label {
   padding-right: 5px;

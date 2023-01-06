@@ -56,7 +56,7 @@ export function BreweryIndex(props) {
       </div>
       <div className="all-brew-containter">
         <div className="item1">
-          <h1>Search for Breweries</h1>
+          <h1>Search Breweries</h1>
         </div>
         <div className="item1">
           <form onSubmit={handeSubmit}>
@@ -100,6 +100,10 @@ export function BreweryIndex(props) {
               </div>
             </div>
           ))}
+      </div>
+      <div className="empty-brew-div ">
+        <br></br>
+        <br></br>
       </div>
     </div>
   );
