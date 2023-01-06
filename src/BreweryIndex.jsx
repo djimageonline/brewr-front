@@ -5,6 +5,7 @@ import { Dropdown } from "./Dropdown";
 
 export function BreweryIndex(props) {
   const [searchFilter, setSearchFilter] = useState("");
+  const [tours, setTours] = useState([]);
 
   const handleUpdateIndexBrewery = (params) => {
     axios.post(`http://localhost:3000/breweries`, params).then((response) => {
@@ -28,7 +29,15 @@ export function BreweryIndex(props) {
     });
   };
 
+  const handleShowTours = () => {
+    axios.get(`http://localhost:3000/tours.json`).then((response) => {
+      console.log(response.data);
+      setTours(response.data);
+    });
+  };
+
   useEffect(handleIndexBrewery, []);
+  useEffect(handleShowTours, []);
 
   return (
     <div id="brewery-index">
@@ -71,9 +80,8 @@ export function BreweryIndex(props) {
                 <br></br>
                 {/* <button onClick={() => handleIndexBrewery(brewery)}>More Info</button> */}
                 <div className="App">
-                  <Dropdown />
+                  <Dropdown dropdownTours={tours} />
                 </div>
-                <button>Add Brewery</button>
               </div>
             </div>
           ))}

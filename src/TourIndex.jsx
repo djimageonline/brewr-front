@@ -36,7 +36,7 @@ export function TourIndex(props) {
     setCurrentTour(tour);
   };
 
-  const handleUpdateTour = (id, params, successCallback) => {
+  const handleUpdateTour = (id, params) => {
     console.log("handleUpdateTour", params);
     axios.patch(`http://localhost:3000/tours/${id}.json`, params).then((response) => {
       setTours(
@@ -48,7 +48,6 @@ export function TourIndex(props) {
           }
         })
       );
-      successCallback();
       handleClose();
     });
   };
