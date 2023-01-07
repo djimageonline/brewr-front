@@ -63,20 +63,28 @@ export function TourIndex(props) {
 
   return (
     <div>
-      <ToursNew onCreateTour={handleCreateTour} />
-      <Modal show={isTourShowInfoVisible} onClose={handleClose}>
-        <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} onDestroyTour={handleDestoryTour} />
-      </Modal>
+      <div className="e-tour ">
+        <br></br>
+      </div>
       <div className="your-tours-container">
-        <h1>Your Tours:</h1>
-        {tours.map((tour) => (
-          <div key={tour.id} className="tours">
-            <h2>
-              {tour.name}
-              <button onClick={() => handleShowTourInfo(tour)}>Info</button>
-            </h2>
-          </div>
-        ))}
+        <div className="left-tour-item-wrap">
+          <ToursNew onCreateTour={handleCreateTour} />
+          <Modal show={isTourShowInfoVisible} onClose={handleClose}>
+            <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} onDestroyTour={handleDestoryTour} />
+          </Modal>
+        </div>
+
+        <div className="right-tour-item-wrap">
+          <h1>Your Tours:</h1>
+          {tours.map((tour) => (
+            <div key={tour.id} className="tours">
+              <h2>
+                {tour.name}
+                <button onClick={() => handleShowTourInfo(tour)}>Info</button>
+              </h2>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {box-sizing: border-box;}
 
 html {
@@ -11,14 +13,14 @@ body {
   background-image: url("/images/beerbackground1.jpg");
   background-size: cover;
   background-attachment: fixed;
-  margin: 0;
+  margin: 0 auto;
 
 }
 
-/**** HOME */
+/**********     HOME        ***************************/
 
 .e-home {
-padding-bottom: 34px;
+padding-bottom: 30px;
 
 }
 
@@ -31,7 +33,7 @@ padding-bottom: 34px;
 .banner {
   background-image: url("/images/Beerlight-homebanner.jpg");
   background-color: #cccccc;
-  height: 800px;
+  height: 900px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,10 +48,17 @@ padding-bottom: 34px;
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  font-size: 50px;
+  
 }
 
-/*****   LOGIN FORM   ***********/
+.box h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 150px;
+}
+
+
+
+/*****   LOGIN FORM   **********************/
 
 @keyframes background {
   100% {background-size: 4000px 1000px;}
@@ -126,7 +135,7 @@ padding-bottom: 34px;
 
 
 
-/*****   TOUR SHOW STYLE    ***********/
+/*****   TOUR SHOW STYLE    **********************/
 
 .container2 {
   display: grid;
@@ -177,6 +186,51 @@ padding-bottom: 34px;
 .titlebrew{
   font-size:30px;
 }
+
+/************  TOURS PAGE SIDE BY SIDE   **************/
+
+.e-tour {
+  padding-bottom: 30px;
+  
+  }
+
+.your-tours-container {
+  display: flex;
+  margin-top: 200px ;
+  color:black;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.left-tour-item-wrap {
+  float: left;
+  width: 400px;
+  flex: 1;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 50px;
+  background-color: #EDE89A;
+  box-shadow: rgba(237, 240, 46, 0.4) -5px 5px, rgba(224, 240, 46, 0.3) -10px 10px, rgba(195, 240, 46, 0.2) -15px 15px, rgba(233, 240, 46, 0.1) -20px 20px, rgba(175, 240, 46, 0.05) -25px 25px;
+
+
+}
+
+
+.right-tour-item-wrap {
+  float: right;
+  width: 400px;
+  flex: 1;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 50px;
+  background-color: #EDE89A;
+  box-shadow: rgba(237, 240, 46, 0.4) -5px 5px, rgba(224, 240, 46, 0.3) -10px 10px, rgba(195, 240, 46, 0.2) -15px 15px, rgba(233, 240, 46, 0.1) -20px 20px, rgba(175, 240, 46, 0.05) -25px 25px;
+ 
+
+}
+
+
 
 
 

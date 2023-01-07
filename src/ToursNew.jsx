@@ -10,7 +10,7 @@ export function ToursNew(props) {
       <h1>New Tour</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          Name: <input name="name" type="text" />
+          <input name="name" type="text" placeholder="Enter Tour Name" />
         </div>
         <button type="submit">Create Tour</button>
       </form>
