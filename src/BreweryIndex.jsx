@@ -58,15 +58,15 @@ export function BreweryIndex(props) {
         <div className="item1">
           <h1>Search Breweries</h1>
         </div>
-        <div className="item1">
+        <div className="item1 city-state-input">
           <form onSubmit={handeSubmit}>
-            <label for="city">City: </label>
+            <label for="city">City:</label>
             <input type="text" id="city" name="city" />
             <br></br>
             <label for="state">State:</label>
             <input type="text" id="state" name="state" />
             <br></br>
-            <input type="submit" value="Submit" className="submit"></input>
+            <input type="submit" value="Submit" className="submit styled-button search-btn"></input>
           </form>
         </div>
         <div className="item1">
@@ -91,7 +91,9 @@ export function BreweryIndex(props) {
                 </p>
                 {/* <p>{brewery.phone}</p> */}
                 <p>
-                  <a href={`https://www.${brewery.url}`}>Website</a>
+                  <a href={`https://www.${brewery.url}`} target="_blank">
+                    Website
+                  </a>
                 </p>
                 <br></br>
                 <div className="App">

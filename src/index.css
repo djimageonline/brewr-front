@@ -24,15 +24,8 @@ body {
 
 /**********     HOME        ***************************/
 
-/* .e-home {
-padding-bottom: 30px;
-
-} */
-
 .back-containter {
   margin-top: 70px;
-  /* display: block;
-  overflow-x: hidden; */
 }
 
 .banner {
@@ -63,9 +56,16 @@ padding-bottom: 30px;
   font-size: 150px;
 }
 
+@media (max-width: 768px) {
+  .box h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 60px;
+  }
+}
 
 
-/*****   LOGIN FORM   **********************/
+
+/*********   LOGIN - SIGNUP FORM   **********************/
 
 @keyframes background {
   100% {background-size: 4000px 1000px;}
@@ -76,7 +76,7 @@ padding-bottom: 30px;
   display: flex;
 	align-items: center;
 	justify-content: center;
-  
+  padding-top: 50px;
 }
 
 @media (width >= 300px) {
@@ -239,7 +239,6 @@ padding-bottom: 30px;
 .center-title {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
 
 }
 
@@ -263,6 +262,8 @@ padding-bottom: 30px;
   font-size:30px;
 }
 
+
+
 /************  TOURS PAGE SIDE BY SIDE   **************/
 
 .e-tour {
@@ -276,6 +277,7 @@ padding-bottom: 30px;
   color:yellow;
   justify-content: center;
   text-align: center;
+
 
 }
 
@@ -304,6 +306,38 @@ padding-bottom: 30px;
   box-shadow: rgba(237, 240, 46, 0.4) -5px 5px, rgba(224, 240, 46, 0.3) -10px 10px, rgba(195, 240, 46, 0.2) -15px 15px, rgba(233, 240, 46, 0.1) -20px 20px, rgba(175, 240, 46, 0.05) -25px 25px;
  
 
+}
+
+/******** Button Style  **************/
+
+.styled-button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 4px 12px;
+  background-color: #3f4229;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.styled-button:hover {
+  background-color: #F5E883;
+  color: #1B0E73;
+}
+.search-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.your-tours-btn, .add-brewery-btn {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 15px;
 }
 
 
@@ -345,9 +379,6 @@ padding-bottom: 30px;
   box-shadow: 0 5px 10px rgba(31, 23, 23, 0.05), 0 15px 40px rgba(226, 245, 169, 0.2);
   background-color: whitesmoke;
 }
-/* #brewery-index {
-  margin-bottom: 100px;
-} */
 
 .location label {
   padding-right: 5px;
@@ -364,6 +395,10 @@ padding-bottom: 30px;
 .breweries p a {
   margin-left: 115px;
   margin-right: 115px;
+}
+
+.city-state-input {
+  margin-top: 20px;
 }
 
 /*** Brwery Search  ***/

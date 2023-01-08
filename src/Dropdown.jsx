@@ -23,7 +23,7 @@ export function Dropdown(props) {
         <input type="hidden" name="url" value={props.brewery.url}></input>
 
         <label>
-          Add to your tour:
+          Select Tour:
           <select name="tour">
             <option value="" disabled selected>
               Select...
@@ -35,7 +35,7 @@ export function Dropdown(props) {
           </select>
         </label>
 
-        <button>Add Brewery</button>
+        <button className="styled-button add-brewery-btn">Add Brewery</button>
       </form>
     </div>
   );

@@ -15,11 +15,11 @@ export function TourIndex(props) {
     });
   };
 
-  const handleCreateTour = (params, successCallback) => {
+  const handleCreateTour = (params) => {
     console.log("handleCreateTour", params);
     axios.post("http://localhost:3000/tours.json", params).then((response) => {
+      console.log(response.data);
       setTours([...tours, response.data]);
-      successCallback();
     });
   };
 
@@ -80,7 +80,9 @@ export function TourIndex(props) {
             <div key={tour.id} className="tours">
               <h2>
                 {tour.name}
-                <button onClick={() => handleShowTourInfo(tour)}>Info</button>
+                <button onClick={() => handleShowTourInfo(tour)} className="styled-button your-tours-btn">
+                  Info
+                </button>
               </h2>
             </div>
           ))}

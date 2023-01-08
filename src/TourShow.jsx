@@ -17,14 +17,16 @@ export function TourShow(props) {
         <form onSubmit={handleSubmit}>
           <div className="center-title">
             <input defaultValue={props.tour.name} name="name" type="text" className="titlebrew" />
-            <button type="submit" className="update-button">
+            <button type="submit" className="update-button styled-button">
               Update Name
             </button>
           </div>
         </form>
-        <button onClick={handleClick} className="delete-button">
-          Delete Tour
-        </button>
+        <div className="delete">
+          <button onClick={handleClick} className="delete-button styled-button">
+            Delete Tour
+          </button>
+        </div>
       </div>
       <div className="container2">
         {props.tour.breweries.map((brewery) => (
