@@ -23,28 +23,51 @@ export function Signup() {
 
   return (
     <div className="body" id="signup">
-      <div className="signup">
-        <h2>Signup</h2>
-        <ul>
-          {errors.map((error) => (
-            <li key={error}>{error}</li>
-          ))}
-        </ul>
-        <form onSubmit={handleSubmit} className="signup-form">
-          <div className="textbox">
-            <input name="name" type="text" placeholder="Name" />
-          </div>
-          <div className="textbox">
-            <input name="email" type="email" placeholder="Email" />
-          </div>
-          <div className="textbox">
-            <input name="password" type="password" placeholder="Passwrod" />
-          </div>
-          <div className="textbox">
-            <input name="password_confirmation" type="password" placeholder="Password Confirmation" />
-          </div>
-          <button type="submit">Signup</button>
-        </form>
+      <div className="display-signup">
+        <div className="signup-content">
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <form onSubmit={handleSubmit} className="signup">
+            <div className="signup-field">
+              <i class="signup-icon fas fa-user">
+                <img src="/images/teamfemale_119531.svg"></img>
+              </i>
+              <input name="name" type="text" placeholder="Name" className="signup-input" />
+            </div>
+            <div className="signup-field">
+              <i class="signup-icon fas fa-user">
+                <img src="/images/email.svg"></img>
+              </i>
+              <input name="email" type="email" placeholder="Email" className="signup-input" />
+            </div>
+            <div className="signup-field">
+              <i class="signup-icon fas fa-user">
+                <img src="/images/lock-svgrepo-com.svg"></img>
+              </i>
+              <input name="password" type="password" placeholder="Password" className="signup-input" />
+            </div>
+            <div className="signup-field">
+              <i class="signup-icon fas fa-user">
+                <img src="/images/lock-svgrepo-com.svg"></img>
+              </i>
+              <input
+                name="password_confirmation"
+                type="password"
+                placeholder="Password Confirmation"
+                className="signup-input"
+              />
+            </div>
+            <button type="submit" className="signup-submit">
+              Sign up
+            </button>
+          </form>
+        </div>
+        <div class="signup-screen-background">
+          <span class="signup-screen-background-shape signup-screen-background-shape1"></span>
+        </div>
       </div>
     </div>
   );

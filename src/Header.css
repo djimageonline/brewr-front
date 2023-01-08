@@ -20,6 +20,10 @@
   color: yellow;
 }
 
+.logo h3 {
+  font-size: 35px;
+}
+
 .nav-menu {
   align-items: center;
   display: flex;
@@ -31,6 +35,7 @@
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+
 }
 
 a {
@@ -49,7 +54,7 @@ img {
 
 span {
   color: rgb(249, 249, 249);
-  font-size: 13px;
+  font-size: 20px;
   letter-spacing: 1px;
   line-height: 1.08;
   padding: 2px 0px;

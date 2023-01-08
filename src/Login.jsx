@@ -30,22 +30,34 @@ export function Login() {
 
   return (
     <div className="body" id="login">
-      <div className="login">
-        <h2>Login</h2>
-        <ul>
-          {errors.map((error) => (
-            <li key={error}>{error}</li>
-          ))}
-        </ul>
-        <form onSubmit={handleSubmit} className="login-form">
-          <div className="textbox">
-            <input name="email" type="email" placeholder="Email" />
-          </div>
-          <div className="textbox">
-            <input name="password" type="password" placeholder="Password" />
-          </div>
-          <button type="submit">Login</button>
-        </form>
+      <div className="display-login">
+        <div className="login-content">
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+          <form onSubmit={handleSubmit} className="login">
+            <div className="login-field">
+              <i class="login-icon fas fa-user">
+                <img src="/images/email.svg"></img>
+              </i>
+              <input name="email" type="email" placeholder="Email" className="login-input" />
+            </div>
+            <div className="login-field">
+              <i class="login-icon fas fa-lock">
+                <img src="/images/lock-svgrepo-com.svg"></img>
+              </i>
+              <input name="password" type="password" placeholder="Password" className="login-input" />
+            </div>
+            <button type="submit" className="login-submit">
+              Log in
+            </button>
+          </form>
+        </div>
+        <div class="log-screen-background">
+          <span class="log-screen-background-shape log-screen-background-shape1"></span>
+        </div>
       </div>
     </div>
   );
