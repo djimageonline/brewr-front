@@ -18,6 +18,7 @@
   font-size: 25px;
   letter-spacing: 1px;
   color: yellow;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .logo h3 {
@@ -54,12 +55,13 @@ img {
 
 span {
   color: rgb(249, 249, 249);
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
   line-height: 1.08;
   padding: 2px 0px;
   white-space: nowrap;
   position: relative;
+  /* font-family: 'Bebas Neue', cursive; */
 }
 
 span:before {
@@ -100,7 +102,7 @@ span:hover:before {
 
   span {
     color: rgb(249, 249, 249);
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
     line-height: 1.08;
     padding: 2px 0px;

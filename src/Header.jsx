@@ -15,15 +15,16 @@ export function Header() {
             <span> HOME</span>
           </Link>
 
+          <Link to="/tours/index">
+            <img src="/images/pedestrian-walk-svgrepo-com.svg" alt="WATCHLIST" />
+            <span> TOURS</span>
+          </Link>
+
           <Link to="/brewery/index">
             <img src="/images/beer-svgrepo-com.svg" alt="SEARCH" />
             <span>SEARCH BREWERY</span>
           </Link>
 
-          <Link to="/tours/index">
-            <img src="/images/pedestrian-walk-svgrepo-com.svg" alt="WATCHLIST" />
-            <span> TOURS</span>
-          </Link>
           {localStorage.jwt === undefined ? (
             <>
               <Link to="/signup">

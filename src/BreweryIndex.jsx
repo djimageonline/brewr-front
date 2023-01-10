@@ -11,7 +11,6 @@ export function BreweryIndex(props) {
 
   const handleUpdateIndexBrewery = (params) => {
     axios.post(`http://localhost:3000/breweries`, params).then((response) => {
-      console.log(response.data);
       setBreweries(response.data);
     });
   };
@@ -26,14 +25,12 @@ export function BreweryIndex(props) {
 
   const handleIndexBrewery = () => {
     axios.get("http://localhost:3000/breweries").then((response) => {
-      console.log(response.data);
       setBreweries(response.data);
     });
   };
 
   const handleShowTours = () => {
     axios.get(`http://localhost:3000/tours.json`).then((response) => {
-      console.log(response.data);
       setTours(response.data);
     });
   };
@@ -83,13 +80,14 @@ export function BreweryIndex(props) {
         {breweries
           .filter((brewery) => brewery.name.toLowerCase().includes(searchFilter.toLowerCase()))
           .map((brewery) => (
-            <div className="card">
-              <div key={brewery.id} className="breweries">
-                <h2>{brewery.name}</h2>
+            <div key={brewery.id} className="card">
+              <div className="breweries">
+                <img src="/images/brewworldbreweryIndex.png" className="beerworld"></img>
+                <h2 className="brew-Title">{brewery.name}</h2>
                 <p>
-                  Address: {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
+                  {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
                 </p>
-                {/* <p>{brewery.phone}</p> */}
+                <p>{brewery.phone}</p>
                 <p>
                   <a href={`https://www.${brewery.url}`} target="_blank">
                     Website

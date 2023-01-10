@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 * {box-sizing: border-box;
   /* margin: 0;
 	padding: 0;	 */
@@ -8,9 +10,8 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
-  
   font-family: 'Bebas Neue', cursive;
-
+  /* font-family: 'Quicksand', sans-serif; */
 }
 
 body {
@@ -50,6 +51,7 @@ body {
   padding: 100px 0;
   
 }
+
 
 .box h1 {
   font-family: 'Bebas Neue', cursive;
@@ -369,7 +371,7 @@ body {
 }
 
 .card {
-  height: 200px;
+  height: 250px;
   width: 300px;
   border: 3px solid;
   color: #090b13;
@@ -377,9 +379,18 @@ body {
   text-align: center;
   border-color: #090b13;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 16px;
   box-shadow: 0 5px 10px rgba(31, 23, 23, 0.05), 0 15px 40px rgba(226, 245, 169, 0.2);
   background-color: whitesmoke;
+}
+
+.beerworld {
+  width: 35px;
+  height: 35px;
+}
+
+.brew-Title {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .location label {
@@ -433,8 +444,8 @@ footer {
   bottom: 0;
   position: fixed;
   color: white;
+  font-family: 'Bebas Neue', cursive;
 }
-
 
 
 /* #root {

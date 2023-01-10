@@ -6,12 +6,13 @@ export function Dropdown(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.addBreweryTours(params, () => event.target.reset());
+    props.addBreweryTours(params);
+    event.target.reset();
   };
 
   return (
     <div>
-      <form onRemoveSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input type="hidden" name="brewery" value={props.brewery.id}></input>
 
         {/* TEST */}
@@ -29,7 +30,9 @@ export function Dropdown(props) {
               Select...
             </option>
             {props.dropdownTours.map((tour) => (
-              <option value={tour.id}>{tour.name}</option>
+              <option key={tour.id} value={tour.id}>
+                {tour.name}
+              </option>
             ))}
             ;
           </select>

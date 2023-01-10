@@ -32,25 +32,25 @@ export function Signup() {
           </ul>
           <form onSubmit={handleSubmit} className="signup">
             <div className="signup-field">
-              <i class="signup-icon fas fa-user">
+              <i className="signup-icon fas fa-user">
                 <img src="/images/teamfemale_119531.svg"></img>
               </i>
               <input name="name" type="text" placeholder="Name" className="signup-input" />
             </div>
             <div className="signup-field">
-              <i class="signup-icon fas fa-user">
+              <i className="signup-icon fas fa-user">
                 <img src="/images/email.svg"></img>
               </i>
               <input name="email" type="email" placeholder="Email" className="signup-input" />
             </div>
             <div className="signup-field">
-              <i class="signup-icon fas fa-user">
+              <i className="signup-icon fas fa-user">
                 <img src="/images/lock-svgrepo-com.svg"></img>
               </i>
               <input name="password" type="password" placeholder="Password" className="signup-input" />
             </div>
             <div className="signup-field">
-              <i class="signup-icon fas fa-user">
+              <i className="signup-icon fas fa-user">
                 <img src="/images/lock-svgrepo-com.svg"></img>
               </i>
               <input
@@ -65,8 +65,8 @@ export function Signup() {
             </button>
           </form>
         </div>
-        <div class="signup-screen-background">
-          <span class="signup-screen-background-shape signup-screen-background-shape1"></span>
+        <div className="signup-screen-background">
+          <span className="signup-screen-background-shape signup-screen-background-shape1"></span>
         </div>
       </div>
     </div>
