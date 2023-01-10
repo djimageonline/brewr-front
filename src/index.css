@@ -341,7 +341,9 @@ body {
 }
 
 
-
+.remove-button {
+  margin-top: 10px;
+}
 
 
 /******   BREWRIES INDEX SHOW STYLE   ******/

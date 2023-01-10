@@ -39,7 +39,7 @@ export function TourShow(props) {
             <h2>{brewery.name}</h2>
             <a href={`https://www.${brewery.description}`}>{brewery.description}</a>
             <form onClick={() => handleClickRemove(brewery.id, props.tour.id)}>
-              <button>Remove</button>
+              <button className="styled-button remove-button">Remove</button>
             </form>
           </div>
         ))}
