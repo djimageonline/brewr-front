@@ -7,6 +7,7 @@ import { TourShow } from "./TourShow";
 export function TourIndex(props) {
   const [tours, setTours] = useState([]);
   const [currentTour, setCurrentTour] = useState({});
+  const [breweryTours, setBreweryTours] = useState([]);
 
   const handleShowTours = () => {
     axios.get(`http://localhost:3000/tours.json`).then((response) => {
@@ -59,6 +60,14 @@ export function TourIndex(props) {
     });
   };
 
+  const handleDestroyBreweryTour = (brewId, brewTourId) => {
+    console.log("Hola 2", brewId);
+    axios.delete("http://localhost:3000/breweries_tours/" + brewId + "/" + brewTourId + ".json").then((response) => {
+      setBreweryTours(breweryTours.filter((t) => t.id !== brewId));
+      handleClose();
+    });
+  };
+
   useEffect(handleShowTours, []);
 
   return (
@@ -70,7 +79,12 @@ export function TourIndex(props) {
         <div className="left-tour-item-wrap">
           <ToursNew onCreateTour={handleCreateTour} />
           <Modal show={isTourShowInfoVisible} onClose={handleClose}>
-            <TourShow tour={currentTour} onUpdateTour={handleUpdateTour} onDestroyTour={handleDestoryTour} />
+            <TourShow
+              tour={currentTour}
+              onUpdateTour={handleUpdateTour}
+              onDestroyTour={handleDestoryTour}
+              onDestroyBreweryTour={handleDestroyBreweryTour}
+            />
           </Modal>
         </div>
 

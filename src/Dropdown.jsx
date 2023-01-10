@@ -11,7 +11,7 @@ export function Dropdown(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onRemoveSubmit={handleSubmit}>
         <input type="hidden" name="brewery" value={props.brewery.id}></input>
 
         {/* TEST */}

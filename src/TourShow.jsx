@@ -11,6 +11,11 @@ export function TourShow(props) {
     props.onDestroyTour(props.tour);
   };
 
+  const handleClickRemove = (brewId, brewTourId) => {
+    props.onDestroyBreweryTour(brewId, brewTourId);
+    console.log("Hola", brewId);
+  };
+
   return (
     <div className="background_modal">
       <div>
@@ -30,11 +35,12 @@ export function TourShow(props) {
       </div>
       <div className="container2">
         {props.tour.breweries.map((brewery) => (
-          <div className="card2">
-            <div key={brewery.id}>
-              <h2>{brewery.name}</h2>
-              <a href={`https://www.${brewery.description}`}>{brewery.description}</a>
-            </div>
+          <div key={brewery.id} className="card2">
+            <h2>{brewery.name}</h2>
+            <a href={`https://www.${brewery.description}`}>{brewery.description}</a>
+            <form onClick={() => handleClickRemove(brewery.id, props.tour.id)}>
+              <button>Remove</button>
+            </form>
           </div>
         ))}
       </div>
