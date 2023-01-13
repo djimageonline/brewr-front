@@ -21,7 +21,7 @@ export function TourShow(props) {
       <div>
         <form onSubmit={handleSubmit}>
           <div className="center-title">
-            <input defaultValue={props.tour.name} name="name" type="text" className="titlebrew" />
+            <input defaultValue={props.tour.name} name="name" type="text" className="titlebrew" maxlength="15" />
             <button type="submit" className="update-button styled-button">
               Update Name
             </button>
