@@ -79,7 +79,9 @@ export function BreweryIndex(props) {
       </div>
       <div className="container">
         {breweries.length < 1 ? (
-          <p>Sorry sucker</p>
+          <div className="sorry-background">
+            <h2>Sorry! Your city is currently in the works! Make sure to check cities near you in the meantime!</h2>
+          </div>
         ) : (
           breweries
             .filter((brewery) => brewery.name.toLowerCase().includes(searchFilter.toLowerCase()))
