@@ -26,6 +26,7 @@ export function BreweryIndex(props) {
   const handleIndexBrewery = () => {
     axios.get("http://localhost:3000/breweries").then((response) => {
       setBreweries(response.data);
+      console.log(response.data, "test");
     });
   };
 
@@ -77,29 +78,33 @@ export function BreweryIndex(props) {
         </div>
       </div>
       <div className="container">
-        {breweries
-          .filter((brewery) => brewery.name.toLowerCase().includes(searchFilter.toLowerCase()))
-          .map((brewery) => (
-            <div key={brewery.id} className="card">
-              <div className="breweries">
-                <img src="/images/brewworldbreweryIndex.png" className="beerworld"></img>
-                <h2 className="brew-Title">{brewery.name}</h2>
-                <p>
-                  {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
-                </p>
-                <p>{brewery.phone}</p>
-                <p>
-                  <a href={`https://www.${brewery.url}`} target="_blank">
-                    Website
-                  </a>
-                </p>
-                <br></br>
-                <div className="App">
-                  <Dropdown dropdownTours={tours} addBreweryTours={handleAddBreweryToTour} brewery={brewery} />
+        {breweries.length < 1 ? (
+          <p>Sorry sucker</p>
+        ) : (
+          breweries
+            .filter((brewery) => brewery.name.toLowerCase().includes(searchFilter.toLowerCase()))
+            .map((brewery) => (
+              <div key={brewery.id} className="card">
+                <div className="breweries">
+                  <img src="/images/brewworldbreweryIndex.png" className="beerworld"></img>
+                  <h2 className="brew-Title">{brewery.name}</h2>
+                  <p>
+                    {brewery.street}, {brewery.city}, {brewery.state}, {brewery.zip}{" "}
+                  </p>
+                  <p>{brewery.phone}</p>
+                  <p>
+                    <a href={`https://www.${brewery.url}`} target="_blank">
+                      Website
+                    </a>
+                  </p>
+                  <br></br>
+                  <div className="App">
+                    <Dropdown dropdownTours={tours} addBreweryTours={handleAddBreweryToTour} brewery={brewery} />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+        )}
       </div>
       <div className="empty-brew-div ">
         <br></br>
