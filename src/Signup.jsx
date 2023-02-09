@@ -9,7 +9,7 @@ export function Signup() {
     setErrors([]);
     const params = new FormData(event.target);
     axios
-      .post("http://localhost:3000/users", params)
+      .post("http://127.0.0.1:3000/users", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();

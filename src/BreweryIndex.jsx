@@ -10,7 +10,7 @@ export function BreweryIndex(props) {
   const [breweriesTours, setBreweriesTours] = useState([]);
 
   const handleUpdateIndexBrewery = (params) => {
-    axios.post(`http://localhost:3000/breweries`, params).then((response) => {
+    axios.post(`http://127.0.0.1:3000/breweries`, params).then((response) => {
       setBreweries(response.data);
     });
   };
@@ -24,20 +24,20 @@ export function BreweryIndex(props) {
   const [breweries, setBreweries] = useState([]);
 
   const handleIndexBrewery = () => {
-    axios.get("http://localhost:3000/breweries").then((response) => {
+    axios.get("http://127.0.0.1:3000/breweries").then((response) => {
       setBreweries(response.data);
       console.log(response.data, "test");
     });
   };
 
   const handleShowTours = () => {
-    axios.get(`http://localhost:3000/tours.json`).then((response) => {
+    axios.get(`http://127.0.0.1:3000/tours.json`).then((response) => {
       setTours(response.data);
     });
   };
 
   const handleAddBreweryToTour = (params) => {
-    axios.post(`http://localhost:3000/breweries_tours.json`, params).then((response) => {
+    axios.post(`http://127.0.0.1:3000/breweries_tours.json`, params).then((response) => {
       console.log(response.data);
       // setBreweriesTours(response.data);
     });
