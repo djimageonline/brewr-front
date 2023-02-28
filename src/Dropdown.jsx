@@ -6,7 +6,8 @@ export function Dropdown(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     const params = new FormData(event.target);
-    props.addBreweryTours(params, () => event.target.reset());
+    props.addBreweryTours(params);
+    event.target.reset();
   };
 
   return (
@@ -29,7 +30,9 @@ export function Dropdown(props) {
               Select...
             </option>
             {props.dropdownTours.map((tour) => (
-              <option value={tour.id}>{tour.name}</option>
+              <option key={tour.id} value={tour.id}>
+                {tour.name}
+              </option>
             ))}
             ;
           </select>

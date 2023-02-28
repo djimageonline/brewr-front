@@ -14,7 +14,7 @@ export function Login() {
     setErrors([]);
     const params = new FormData(event.target);
     axios
-      .post("http://localhost:3000/sessions", params)
+      .post("http://127.0.0.1:3000/sessions", params)
       .then((response) => {
         console.log(response.data);
         axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
@@ -39,13 +39,13 @@ export function Login() {
           </ul>
           <form onSubmit={handleSubmit} className="login">
             <div className="login-field">
-              <i class="login-icon fas fa-user">
+              <i className="login-icon fas fa-user">
                 <img src="/images/email.svg"></img>
               </i>
               <input name="email" type="email" placeholder="Email" className="login-input" />
             </div>
             <div className="login-field">
-              <i class="login-icon fas fa-lock">
+              <i className="login-icon fas fa-lock">
                 <img src="/images/lock-svgrepo-com.svg"></img>
               </i>
               <input name="password" type="password" placeholder="Password" className="login-input" />
@@ -55,8 +55,8 @@ export function Login() {
             </button>
           </form>
         </div>
-        <div class="log-screen-background">
-          <span class="log-screen-background-shape log-screen-background-shape1"></span>
+        <div className="log-screen-background">
+          <span className="log-screen-background-shape log-screen-background-shape1"></span>
         </div>
       </div>
     </div>
