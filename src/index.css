@@ -88,9 +88,9 @@ body {
 }
 
 .display-login, .display-signup {
-  background: linear-gradient(90deg, #261511, #382c2b);		
-  background-image: url("/images/henry-co--7XBGB1dW8w-unsplash.jpg");
-  background-size: cover;
+  background: linear-gradient(90deg, #000000, #1e180c);		
+  /* background-image: url("/images/henry-co--7XBGB1dW8w-unsplash.jpg");
+  background-size: cover; */
   position: relative;	
 	height: 600px;
 	width: 360px;	
