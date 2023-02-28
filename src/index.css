@@ -104,6 +104,7 @@ body {
 	height: 100%;
 }
 
+
 .login, .signup {
 	width: 320px;
 	padding: 30px;
@@ -206,6 +207,11 @@ body {
 	color: #7875B5;
 }
 
+.note {
+  margin-left: 30px;
+  color: white;
+  text-decoration: underline;
+}
 
 
 
