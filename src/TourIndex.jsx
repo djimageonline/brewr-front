@@ -10,7 +10,7 @@ export function TourIndex(props) {
   const [breweryTours, setBreweryTours] = useState([]);
 
   const handleShowTours = () => {
-    axios.get(`http://brewr-production.up.railway.app/tours.json`).then((response) => {
+    axios.get(`https://brewr-production.up.railway.app/tours.json`).then((response) => {
       console.log(response.data);
       setTours(response.data);
     });
@@ -18,7 +18,7 @@ export function TourIndex(props) {
 
   const handleCreateTour = (params) => {
     console.log("handleCreateTour", params);
-    axios.post("http://brewr-production.up.railway.app/tours.json", params).then((response) => {
+    axios.post("https://brewr-production.up.railway.app/tours.json", params).then((response) => {
       console.log(response.data);
       setTours([...tours, response.data]);
     });
@@ -39,7 +39,7 @@ export function TourIndex(props) {
 
   const handleUpdateTour = (id, params) => {
     console.log("handleUpdateTour", params);
-    axios.patch(`http://brewr-production.up.railway.app/tours/${id}.json`, params).then((response) => {
+    axios.patch(`https://brewr-production.up.railway.app/tours/${id}.json`, params).then((response) => {
       setTours(
         tours.map((tour) => {
           if (tour.id === response.data.id) {
@@ -54,7 +54,7 @@ export function TourIndex(props) {
   };
 
   const handleDestoryTour = (tour) => {
-    axios.delete("http://brewr-production.up.railway.app/tours/" + tour.id + ".json").then((response) => {
+    axios.delete("https://brewr-production.up.railway.app/tours/" + tour.id + ".json").then((response) => {
       setTours(tours.filter((t) => t.id !== tour.id));
       handleClose();
     });
@@ -62,10 +62,12 @@ export function TourIndex(props) {
 
   const handleDestroyBreweryTour = (brewId, brewTourId) => {
     console.log("Hola 2", brewId);
-    axios.delete("http://brewr-production.up.railway.app/breweries_tours/" + brewId + "/" + brewTourId + ".json").then((response) => {
-      setBreweryTours(breweryTours.filter((t) => t.id !== brewId));
-      handleClose();
-    });
+    axios
+      .delete("https://brewr-production.up.railway.app/breweries_tours/" + brewId + "/" + brewTourId + ".json")
+      .then((response) => {
+        setBreweryTours(breweryTours.filter((t) => t.id !== brewId));
+        handleClose();
+      });
   };
 
   useEffect(handleShowTours, []);
