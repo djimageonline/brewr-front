@@ -53,30 +53,33 @@ export function BreweryIndex(props) {
         <ImageSlider />
       </div>
       <div className="all-brew-containter">
-        <div className="item1 search-breweries-h1">
-          <h1>Search Breweries</h1>
-        </div>
-        <div className="item1 city-state-input">
-          <form onSubmit={handeSubmit}>
-            <label className="labels-search" for="city">
-              City:
-            </label>
-            <input className="input-search" type="text" id="city" name="city" />
-            <label className="labels-search" for="state">
-              State:
-            </label>
-            <input className="input-search" type="text" id="state" name="state" />
-            <input type="submit" value="Submit" className="submit styled-button search-btn input-search"></input>
-          </form>
-        </div>
-        <div className="item1 item-search-filter">
-          <span className="labels-search search">Filter:</span>
-          <input
-            className="input-search"
-            type="text"
-            value={searchFilter}
-            onChange={(event) => setSearchFilter(event.target.value)}
-          />
+        <div className="brew-inside-container">
+          <div className="item1 search-breweries-h1">
+            <h1>Search Breweries</h1>
+          </div>
+          <div className="item1 city-state-input">
+            <form onSubmit={handeSubmit}>
+              <label className="labels-search" for="city">
+                City:
+              </label>
+              <input className="input-search" type="text" id="city" placeholder="Enter City" name="city" />
+              <label className="labels-search" for="state">
+                State:
+              </label>
+              <input className="input-search" type="text" id="state" name="state" placeholder="Enter State" />
+              <input type="submit" value="Submit" className="submit styled-button search-btn input-search"></input>
+            </form>
+          </div>
+          <div className="item1 item-search-filter">
+            <span className="labels-search search">Filter:</span>
+            <input
+              className="input-search"
+              type="text"
+              value={searchFilter}
+              placeholder="Filter"
+              onChange={(event) => setSearchFilter(event.target.value)}
+            />
+          </div>
         </div>
       </div>
       <div className="container">
