@@ -37,7 +37,7 @@ body {
   background-size: cover;
   position: relative;
   min-width: 100%;
-  min-height: 120%;
+  min-height: 100%;
 }
 
 .box {
@@ -359,9 +359,7 @@ body {
   padding: 5px;
 }
 
-.all-brew-containter {
-  margin-top: -1px;
-}
+
 
 .container {
   display: grid;
@@ -425,16 +423,34 @@ body {
 .all-brew-containter {
   background-color: #090b13;
   color: white;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-top: -1px;
+  font-size: 20px;
 }
 
 
 .item1 {
-  padding-right: 30px;
+  margin: 0 30px;
+}
+
+.search-breweries-h1{
+  margin-left: -40px;
+}
+
+.labels-search {
+  margin: 0 5px;
+}
+
+.item-search-filter{
+  margin-left: -30px;
+}
+
+.input-search {
+  width: 110px;
+  margin: 0 5px
 }
 
 

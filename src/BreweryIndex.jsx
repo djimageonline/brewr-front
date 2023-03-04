@@ -53,24 +53,26 @@ export function BreweryIndex(props) {
         <ImageSlider />
       </div>
       <div className="all-brew-containter">
-        <div className="item1">
+        <div className="item1 search-breweries-h1">
           <h1>Search Breweries</h1>
         </div>
         <div className="item1 city-state-input">
           <form onSubmit={handeSubmit}>
-            <label for="city">City:</label>
-            <input type="text" id="city" name="city" />
-            <br></br>
-            <label for="state">State:</label>
-            <input type="text" id="state" name="state" />
-            <br></br>
-            <input type="submit" value="Submit" className="submit styled-button search-btn"></input>
+            <label className="labels-search" for="city">
+              City:
+            </label>
+            <input className="input-search" type="text" id="city" name="city" />
+            <label className="labels-search" for="state">
+              State:
+            </label>
+            <input className="input-search" type="text" id="state" name="state" />
+            <input type="submit" value="Submit" className="submit styled-button search-btn input-search"></input>
           </form>
         </div>
-        <div className="item1">
-          Search filter:
+        <div className="item1 item-search-filter">
+          <span className="labels-search search">Filter:</span>
           <input
-            className=""
+            className="input-search"
             type="text"
             value={searchFilter}
             onChange={(event) => setSearchFilter(event.target.value)}

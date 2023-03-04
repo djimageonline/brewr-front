@@ -23,7 +23,7 @@ export function Header() {
           // type="submit"
           onClick={navToggleClick}
           className="nav-toggle"
-          // id="toggle"
+          id="toggle"
           aria-label="toggle navigation"
         >
           <span className="hamburger"></span>
