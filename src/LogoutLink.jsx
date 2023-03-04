@@ -1,7 +1,7 @@
 import axios from "axios";
 import "./index.css";
 
-export function LogoutLink() {
+export function LogoutLink(props) {
   const handleClick = (event) => {
     event.preventDefault();
     delete axios.defaults.headers.common["Authorization"];
@@ -13,7 +13,9 @@ export function LogoutLink() {
     <div className="logout">
       <a href="#" onClick={handleClick}>
         <img src="/images/exit-logout-svgrepo-com.svg" alt="HOME" />
-        <span>LOGOUT</span>
+        <span className="span-link" onClick={props.handelNavClose}>
+          LOGOUT
+        </span>
       </a>
     </div>
   );

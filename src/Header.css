@@ -93,8 +93,6 @@ img {
 
   #toggle {
     display:initial;
-    /* justify-content: right;
-    align-items: end; */
   }
 
   .nav-toggle {
@@ -131,11 +129,6 @@ img {
     display: flex;
     justify-content: space-between;
   }
-
-  /* .navbar {
-    display: flex;
-    justify-content: space-between;
-  } */
 
   .nav {
     position: fixed;

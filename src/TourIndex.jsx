@@ -78,7 +78,7 @@ export function TourIndex(props) {
         <br></br>
       </div>
       <div className="your-tours-container">
-        <div className="left-tour-item-wrap">
+        <div className="tour-card">
           <ToursNew onCreateTour={handleCreateTour} />
           <Modal show={isTourShowInfoVisible} onClose={handleClose}>
             <TourShow
@@ -90,7 +90,7 @@ export function TourIndex(props) {
           </Modal>
         </div>
 
-        <div className="right-tour-item-wrap">
+        <div className="tour-card">
           <h1>Your Tours:</h1>
           {tours.map((tour) => (
             <div key={tour.id} className="tours">
