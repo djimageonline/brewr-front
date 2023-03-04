@@ -460,12 +460,6 @@ footer {
   margin-top: 100px;
 }
 
-.sorry-background {
-  background-color: #cccccc;
-  border: 3px solid;
-  padding: 5px;
-  margin-top: 100px;
-}
 
 @media (width >= 300px) {
   .sorry-background {
