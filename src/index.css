@@ -51,7 +51,6 @@ body {
   
 }
 
-
 .box h1 {
   font-family: 'Bebas Neue', cursive;
   font-size: 150px;
@@ -89,8 +88,6 @@ body {
 
 .display-login, .display-signup {
   background: linear-gradient(90deg, #000000, #1e180c);		
-  /* background-image: url("/images/henry-co--7XBGB1dW8w-unsplash.jpg");
-  background-size: cover; */
   position: relative;	
 	height: 600px;
 	width: 360px;	
@@ -103,7 +100,6 @@ body {
 	position: relative;	
 	height: 100%;
 }
-
 
 .login, .signup {
 	width: 320px;
@@ -263,6 +259,8 @@ body {
 .card2 a {
   margin-left: 30%;
   margin-right: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .titlebrew{
@@ -307,13 +305,6 @@ body {
 
 }
 
-
-/* @media(max-width: 930px){
-  
-  }
-} */
-
-
 /******** Button Style  **************/
 
 .styled-button{
@@ -357,8 +348,6 @@ body {
 .empty-brew-div {
   padding: 5px;
 }
-
-
 
 .container {
   display: grid;
@@ -422,7 +411,6 @@ body {
 .all-brew-containter {
   background-color: #090b13;
   color: white;
-  display: ;
   margin-top: -1px;
   font-size: 20px;
 }
@@ -504,11 +492,7 @@ body {
   .search-btn {
     margin-top: 5px;
   }
-
 }
-
-
-
 
 /*** Brwery Search  ***/
 
@@ -532,7 +516,6 @@ footer {
   margin-top: 100px;
 }
 
-
 @media (width >= 300px) {
   .sorry-background {
     background-color: #cccccc;
@@ -543,8 +526,3 @@ footer {
   }
 
 }
-
-/* #root {
-  
-} */
-

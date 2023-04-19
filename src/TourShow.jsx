@@ -37,7 +37,9 @@ export function TourShow(props) {
         {props.tour.breweries.map((brewery) => (
           <div key={brewery.id} className="card2">
             <h2>{brewery.name}</h2>
-            <a href={`https://www.${brewery.description}`}>{brewery.description}</a>
+            <a className="website-in-show" href={`https://www.${brewery.description}`}>
+              {brewery.description}
+            </a>
             <form onClick={() => handleClickRemove(brewery.id, props.tour.id)}>
               <button className="styled-button remove-button">Remove</button>
             </form>
